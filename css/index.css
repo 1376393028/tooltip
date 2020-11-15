@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #ccc;
+}
+
+.tip {
+    position: relative;
+    max-width: 300px;
+    margin: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tooltip {
+    background: #000;
+    max-width: 260px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    top: calc(100% + 10px);
+    font-weight: normal;
+    font-style: italic;
+    display: none;
+}
+
+.tooltip::before {
+    content: ' ';
+    border: 8px solid transparent;
+    border-bottom-color: #000;
+    position: absolute;
+    top: -16px;
+    left: 8px;
+}
+
+.tip:hover .tooltip {
+    display: block;
+}
